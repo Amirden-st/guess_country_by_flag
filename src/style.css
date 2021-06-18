@@ -1,0 +1,178 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: antiquewhite;
+}
+
+select {
+    min-width: 20%;
+    border-radius: 5px;
+    padding: 0 8px;
+    background-color: #BDBDBD;
+}
+
+#display {
+    height: 100vh;
+    background-color: #212121;
+    padding-top: 15px;
+    overflow-y: hidden;
+}
+
+#game-layer {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Loader */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+/* Start menu */
+#pic {   
+    width: 50%;
+    height: 300px;
+    background: url('img/pic.png') no-repeat center;
+    background-size: cover;
+    margin: 0 auto 25px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40%;
+}
+#subtitle {
+    margin-bottom: 10px;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+}
+
+.setting + .setting {
+    margin-top: 5px;
+}
+
+.setting .option {
+    text-align: center;
+}
+
+button {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 65px;
+    margin: 35px auto 0;
+    color: inherit;
+    background-color: #4CAF50;
+    font-family: inherit;
+    font-size: 17px;
+}
+
+/* Question */
+
+.flag {
+    max-width: 50%;
+    min-height: 260px;
+    margin: 25px auto 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 55%;
+    margin: 0 auto 15px;
+}
+
+.option {
+    border-radius: 5px;
+    width: calc(50% - 50px);
+    margin-bottom: 30px;
+    padding: 7px;
+    text-align: center;
+    background-color: #757575;
+}
+
+/* Progress bar */
+#time {
+    background-color: #757575;
+}
+
+#bar {
+    height: 30px;
+    background-color: #4CAF50;
+}
+
+
+/* EndMenu */
+#result {
+    padding-top: 180px;
+    text-align: center;
+    
+}
+#result-title {
+    margin-bottom: 20px;
+
+}
+#score {
+    margin-bottom: 40px;
+}
+
+#replay-btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 65px;
+    margin: 0 auto;
+    background-color: #757575;
+    color: #fff;
+    text-decoration: none;
+}

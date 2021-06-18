@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-// const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -58,9 +58,9 @@ module.exports = {
     //     },
     //   ],
     // }),
-    new CopyWebpackPlugin({
-      patterns: [{ from: "home_works/hw6_project/img", to: "img" }],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [{ from: "src/img", to: "img" }],
+    // }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
